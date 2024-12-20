@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html>
+  <header class="header">
+    <a href="" class="logo"><p><img src="https://w7.pngwing.com/pngs/697/873/png-transparent-yoga-vriksasana-silhouette-yoga-branch-nutrition-sports.png" width="20" height="25" align="bottom" /> 
+        Yoga Studio Sunshine</p> </a>
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul class="menu">
+      <li><a href="index.html">Main</a></li>
+      <li><a href="2.html">Our Certificates/Instructors</a></li>
+      <li><a href="3.html">Prices/Registration</a></li>
+      <li><a href="4.html">Contacts</a></li>
+    </ul>
+  </header>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-5" />
+<style type="text/css">
+  *{
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+  }
+  
+  a {
+    color: #000;
+  }
+  
+  /* header */
+  
+  .header {
+    background-color: #ffffff;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+  }
+  
+  .header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #adb2b5;
+  }
+  
+  .header li a {
+    display: block;
+    padding: 20px 20px;
+    border-right: 1px solid #f4f4f4;
+    text-decoration: none;
+  }
+  
+  .header li a:hover,
+  .header .menu-btn:hover {
+    background-color: #fec1c6;
+  }
+  
+  .header .logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 10px 20px;
+    text-decoration: none;
+  }
+  
+  /* menu */
+  
+  .header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+  }
+  
+  /* menu icon */
+  
+  .header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+  }
+  
+  .header .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+  }
+  
+  .header .menu-icon .navicon:before,
+  .header .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  
+  .header .menu-icon .navicon:before {
+    top: 5px;
+  }
+  
+  .header .menu-icon .navicon:after {
+    top: -5px;
+  }
+  
+  /* menu btn */
+  
+  .header .menu-btn {
+    display: none;
+  }
+  
+  .header .menu-btn:checked ~ .menu {
+    max-height: 240px;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+  
+  /* 48em = 768px */
+  
+  @media (min-width: 48em) {
+    .header li {
+      float: left;
+    }
+    .header li a {
+      padding: 20px 30px;
+    }
+    .header .menu {
+      clear: none;
+      float: right;
+      max-height: none;
+    }
+    .header .menu-icon {
+      display: none;
+    }
+  }
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-5" />
+<style type="text/css">
+* {
+  padding:0;
+  margin:0;
+  border:0;
+}
+#content {
+  margin:0px;
+  padding:5px;
+  text-align:center;
+  list-style:none;
+  white-space:nowrap;
+}
+#content LI {
+  display:inline-block;
+  margin:0 -2px;
+  vertical-align:top;
+}
+#content LI A {
+  display:inline-block;
+  border:rgb(255, 0, 0) 1px solid;
+  margin:0 30px 0 0;
+  padding:10px 20px;
+  text-decoration:none;
+  color:rgb(255, 255, 255);
+  vertical-align:bottom;
+}
+#content LI A:hover {
+  color:rgb(187, 113, 113);
+}
+@-moz-document url-prefix() {
+  #content LI {display:-moz-inline-grid;display:inline-block;} /*For FF2 only*/
+  #content LI {margin:0 -2px;} /*For FF*/        
+  #content LI, x:-moz-any-link, x:default { margin:0 -2px;} /*For FF3*/
+}
+ 
+</style>
+<!--[if lte IE 7]>
+<style type="text/css">
+#content LI {
+  display:inline;
+  margin:0;
+}
+</style>
+<![endif]-->
+ 
+<title>Main</title>
+</head>
+<head>
+  <meta charset="utf-8">
+  <title>Кнопка</title>
+  <style>
+   .btn {
+    display: inline-block; /* Строчно-блочный элемент */
+    background: #8C959D; /* Серый цвет фона */
+    color: #fff; /* Белый цвет текста */
+    padding: 1rem 1.5rem; /* Поля вокруг текста */
+    text-decoration: none; /* Убираем подчёркивание */
+    border-radius: 3px; /* Скругляем уголки */
+   }
+  </style>
+ </head>
+ <body> 
+  <a href="page/new.html" class="btn">Переход по ссылке</a>
+ </body>
+ <head>
+  <style>
+    .frame {
+      display: flex;
+      align-items: center;
+      width: 550px;
+      margin-bottom: 20px;
+      border: 2px solid black;
+      padding: 10px;
+    }
+
+    .frame img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      margin-right: 10px;
+    }
+
+    .frame-text {
+      font-size: 18px;
+    }
+
+    .sidebar {
+      margin-left: 20px;
+      font-size: 20px;
+      padding: 20px;
+    }
+  </style>
+</head>
+ 
+<body>
+  <br>
+ 
+  <div id="tekst">
+
+    
+    
+    
+    </div>
+      <style>
+        #tekst img {
+            width: 100%; /* Задает ширину 100% от родительского элемента */
+            height: auto; /* Сохраняет пропорции изображения */
+        }
+    </style>
+</head>
+
+  <br><br>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #fec1c6;
+    }
+
+    .prices-table {
+      width: 100%;
+      max-width: 800px;
+      margin: 20px auto;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #fec1c6;
+      color: white;
+    }
+
+    td {
+      background-color: #fff;
+    }
+
+    .note {
+      text-align: center;
+      font-style: italic;
+      color: #666;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Membership Prices</h1>
+
+  <!-- Single Table with all memberships -->
+  <table class="prices-table">
+    <tr>
+      <th>Type of Membership</th>
+      <th>4 Classes</th>
+      <th>6 Classes</th>
+      <th>8 Classes</th>
+      <th>12 Classes</th>
+      <th>Single Visit</th>
+    </tr>
+    <tr>
+      <td>Adult Day Pass (10:00 - 13:00)</td>
+      <td>$19.99</td>
+      <td>$24.99</td>
+      <td>$34.99</td>
+      <td>$44.99</td>
+      <td>$4.99</td>
+    </tr>
+    <tr>
+      <td>Adult Evening Pass (18:00 - 21:00)</td>
+      <td>$24.99</td>
+      <td>$34.99</td>
+      <td>$44.99</td>
+      <td>$59.99</td>
+      <td>$8.99</td>
+    </tr>
+    <tr>
+      <td>Student Day Pass (10:00 - 13:00)</td>
+      <td>$9.99</td>
+      <td>$14.99</td>
+      <td>$24.99</td>
+      <td>$34.99</td>
+      <td>$4.99</td>
+    </tr>
+    <tr>
+      <td>Student Evening Pass (18:00 - 21:00)</td>
+      <td>$14.99</td>
+      <td>$24.99</td>
+      <td>$34.99</td>
+      <td>$49.99</td>
+      <td>$8.99</td>
+    </tr>
+    <tr>
+      <td>Membership with Pool Access</td>
+      <td>$39.99</td>
+      <td>$49.99</td>
+      <td>$69.99</td>
+      <td>$89.99</td>
+      <td>$14.99</td>
+    </tr>
+    <tr>
+      <td>Membership with Cryotherapy and Salt Cave</td>
+      <td>$54.99</td>
+      <td>$64.99</td>
+      <td>$84.99</td>
+      <td>$104.99</td>
+      <td>$19.99</td>
+    </tr>
+    <tr>
+      <td>Pensioner Pass </td>
+      <td colspan="5">$1</td>
+    </tr>
+  </table>
+
+  <p class="note">* Prices are subject to change. Last update 12.10.24.</p>
+<br>
+</body>
+    <head>
+      <center><div class="text">Our QR</div></center>
+      
+      <style>
+    /* Center the image */
+    .image-container {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    /* Style the image */
+    .attention-image {
+      width: 300px;
+      height: auto;
+      transition: transform 0.3s ease; /* Smooth transition */
+    }
+
+    /* Hover effect */
+    .attention-image:hover {
+      transform: scale(1.2); /* Increase size by 20% */
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="image-container">
+    <img src="https://sun9-51.userapi.com/s/v1/ig2/MB4xyrssM8bOh0rHV8x9A_kPxsyceSXNkx276HJpS5yyXdt82E_ZQO0ntrmHS4wtbB2MeK4fiJGTeQ6gZ9TUnJam.jpg?quality=95&as=32x32,48x49,72x73,108x110,160x162,240x244,360x365,480x487,540x548,640x650,666x676&from=bu&u=ovHAAfUBI8NpQTFmPWtO17-BiZQCrFAhbBOLBVjqaQ0&cs=510x518" 
+         alt="QR Code" class="attention-image">
+  </div>
+
+
+  </div>
+      <title>Main</title>
+    <style>
+        .button {
+            display: inline-block;
+            padding: 100px 100px;
+            font-size: 48px;
+            background-color: white;
+            color:  rgb(254, 193, 198);
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: rgb(254, 193, 198);
+            color: white;
+        }
+    </style>
+</head>
+
+<head>
+    <style>
+        .button {
+            display: inline-block;
+            padding: 50px 100px;
+            font-size: 36px;
+            background-color: white;
+            color:  rgb(173,178,181);
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: rgb(254, 193, 198);
+            color: white;
+        }
+    </style>
+</head>
+
+<head>
+    <style>
+        .container {
+            display: inline-block;
+            width: 300px;
+            height: 400px;
+            background-color: #f2f2f2;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .container:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .text {
+            padding: 10px;
+            color: #fff;
+            font-family: "Arial", sans-serif;
+            font-size: 18px;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+    </style>
+</head>
+<body>
+  <br>
+  
+  
+  <div class="text-block">
+      <h2>Scan the QR Code to Sign Up for Your First Yoga Class!</h2>
+      <p>By scanning this QR code, you will be able to register for your first session at our studio. Whether you're new to yoga or a seasoned practitioner, we are excited to guide you on your wellness journey. Do not miss outreserve your spot today and start experiencing the benefits of yoga with our expert instructors!</p>
+      
+    
+    </div></center>
+</body>
+<br>
+<head>
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+      }
+      
+      .text-block {
+          margin: 20px;
+          padding: 20px;
+          border: 1px solid #ccc;
+          border-radius: 10px;
+          background-color: #f9f9f9;
+          text-align: justify;
+          line-height: 1.5;
+      }
+  </style>
+</head>
+<body>
+  <style>
+    body{
+        background-image: url('https://www.colorhexa.com/adb2b5.png');
+        background-attachment: fixed;
+    }
+</style>
+
+<div><style>
+    .note {
+        font-family: 'Arial', sans-serif; /* Шрифт Arial */
+        font-style: italic; /* Курсив */
+        font-size: 14px; /* Размер шрифта */
+        color: #666; /* Цвет текста */
+        text-align: center; /* Выравнивание по центру */
+        margin-top: 20px; /* Отступ сверху */
+        transition: color 0.3s ease; /* Плавный переход цвета */
+    }
+
+    .note:hover {
+        color: #fec1c6; /* Цвет текста при наведении (например, оранжевый) */
+    }
+</style>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        form {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border: 2px solid #fec1c6; /* Рамка */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], input[type="date"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #fec1c6;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ec8d94; /* Изменено для лучшего эффекта при наведении */
+        }
+        .message {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<form action="https://formspree.io/f/myzyyjon" method="POST">
+    <h2>Sign Up for Membership</h2>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="_replyto" required>
+
+    <label for="phone">Phone number:</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label for="date">Choose a Date:</label>
+    <input type="date" id="date" name="date" required>
+
+    <label for="class">Choose type of Membership:</label>
+    <select id="class" name="class" required>
+        <option value="Утренний класс">Adult Day Pass</option>
+        <option value="Вечерний класс">Adult Evening Pass</option>
+        <option value="Утренний класс c">Student Day Pass</option>
+        <option value="Вечерний класс c">Student Evening Pass</option>
+        <option value="Бассейн">Membership with Pool Access</option>
+        <option value="Креокамера и Сауна">Membership with Cryotherapy and Salt Cave</option>
+        <option value="Пенсионер">Pensioner Pass</option>
+    </select>
+
+    <label for="message" class="message">Message (optional):</label>
+    <textarea id="message" name="message" rows="4"></textarea>
+
+    <button type="submit">Sign up</button>
+</form>
+
+</body>
+
+<div>
+  <h3>Subscription Cost Calculator:</h3>
+
+  <label for="subscription">Select subscription type:</label>
+  <select id="subscription">
+    <option value="adult_day_4">Adult Day Pass (10:00 - 13:00) - 4 classes ($19.99)</option>
+    <option value="adult_day_6">Adult Day Pass (10:00 - 13:00) - 6 classes ($24.99)</option>
+    <option value="adult_day_8">Adult Day Pass (10:00 - 13:00) - 8 classes ($34.99)</option>
+    <option value="adult_day_12">Adult Day Pass (10:00 - 13:00) - 12 classes ($44.99)</option>
+    <option value="adult_evening_4">Adult Evening Pass (18:00 - 21:00) - 4 classes ($24.99)</option>
+    <option value="adult_evening_6">Adult Evening Pass (18:00 - 21:00) - 6 classes ($34.99)</option>
+    <option value="adult_evening_8">Adult Evening Pass (18:00 - 21:00) - 8 classes ($44.99)</option>
+    <option value="adult_evening_12">Adult Evening Pass (18:00 - 21:00) - 12 classes ($59.99)</option>
+    <option value="pool_access_4">Membership with Pool Access - 4 classes ($39.99)</option>
+    <option value="cryotherapy_4">Membership with Cryotherapy and Salt Cave - 4 classes ($54.99)</option>
+    <option value="pensioner">Pensioner Pass ($1.00)</option>
+  </select>
+
+  <label for="months">Select duration (in months):</label>
+  <input type="number" id="months" value="1" min="1" max="12">
+
+  <button onclick="calculatePrice()">Calculate</button>
+
+  <h4 id="totalPrice"></h4>
+</div>
+
+<script>
+  function calculatePrice() {
+    const subscription = document.getElementById('subscription').value;
+    const months = parseInt(document.getElementById('months').value);
+
+    // Проверка на ввод значения для месяцев
+    if (isNaN(months) || months < 1 || months > 12) {
+      document.getElementById('totalPrice').innerText = "Please select a valid number of months (1-12).";
+      return;
+    }
+
+    let basePrice = 0;
+
+    // Устанавливаем базовую цену в зависимости от выбранного типа абонемента
+    switch (subscription) {
+      case "adult_day_4":
+        basePrice = 19.99;
+        break;
+      case "adult_day_6":
+        basePrice = 24.99;
+        break;
+      case "adult_day_8":
+        basePrice = 34.99;
+        break;
+      case "adult_day_12":
+        basePrice = 44.99;
+        break;
+      case "adult_evening_4":
+        basePrice = 24.99;
+        break;
+      case "adult_evening_6":
+        basePrice = 34.99;
+        break;
+      case "adult_evening_8":
+        basePrice = 44.99;
+        break;
+      case "adult_evening_12":
+        basePrice = 59.99;
+        break;
+      case "pool_access_4":
+        basePrice = 39.99;
+        break;
+      case "cryotherapy_4":
+        basePrice = 54.99;
+        break;
+      case "pensioner":
+        basePrice = 1.00;
+        break;
+      default:
+        basePrice = 0;
+        break;
+    }
+
+    let totalPrice;
+    
+    // Проверяем, выбрана ли подписка для пенсионеров
+    if (subscription === "pensioner") {
+      // Для пенсионеров скидка не применяется
+      totalPrice = basePrice * months;
+    } else {
+      // Рассчитываем скидку на основе количества месяцев (2.5% за каждый месяц после первого)
+      let discount = Math.min((months - 1) * 2.5, 30); // Максимальная скидка - 30%
+      totalPrice = basePrice * months * (1 - discount / 100);
+    }
+
+    // Выводим итоговую стоимость
+    document.getElementById('totalPrice').innerText = `Total cost for ${months} month(s): $${totalPrice.toFixed(2)}`;
+  }
+</script>
+<br><br>
+<p class="note">Yoga Studio Sunshine - Since 2022</p></div>
+<br><br>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Стиль для кнопки-иконки бота */
+    .chat-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: #FEC1C6;  /* Цвет фона кнопки */
+      box-shadow: 0 0 10px rgba(254, 193, 198, 0.8);  /* Светящийся эффект */
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: glow 1s infinite alternate;  /* Анимация свечения */
+      z-index: 1000;
+    }
+
+    /* Анимация свечения */
+    @keyframes glow {
+      from { box-shadow: 0 0 5px rgba(254, 193, 198, 0.5); }
+      to { box-shadow: 0 0 15px rgba(254, 193, 198, 1); }
+    }
+
+    /* Скрытый блок для чата */
+    .chat-window {
+      display: none;
+      position: fixed;
+      bottom: 100px;
+      right: 20px;
+      width: 300px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      padding: 15px;
+      z-index: 1000;
+    }
+
+    /* Стиль для сообщений в чате */
+    #chatBox {
+      max-height: 200px;
+      overflow-y: auto;
+      margin-bottom: 10px;
+    }
+
+    .chat-window h3 {
+      text-align: center;
+      margin-top: 0;
+    }
+
+    .chat-window input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .chat-window button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      background-color: #FEC1C6;  /* Цвет фона кнопки */
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* Стиль для изображения бота */
+    .chat-icon img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Кнопка для открытия чата с изображением бота -->
+<div class="chat-button" onclick="toggleChat()">
+  <div class="chat-icon">
+    <img src="https://img.freepik.com/free-vector/graident-ai-robot-vectorart_78370-4114.jpg" alt="Chat Bot Icon">
+  </div>
+</div>
+
+<!-- Окно чата -->
+<div class="chat-window" id="chatWindow">
+  <h3>Chatbot</h3>
+  <div id="chatBox"></div>
+  <input type="text" id="userInput" placeholder="Your question">
+  <button onclick="getAnswer()">Send</button>
+</div>
+
+<script>
+  const chatBox = document.getElementById('chatBox');
+  const chatWindow = document.getElementById('chatWindow');
+
+  // Функция для переключения отображения окна чата
+  function toggleChat() {
+    if (chatWindow.style.display === 'none' || chatWindow.style.display === '') {
+      chatWindow.style.display = 'block';
+    } else {
+      chatWindow.style.display = 'none';
+    }
+  }
+
+  // Функция для обработки вопроса пользователя и отображения ответа бота
+  function getAnswer() {
+    const userQuestion = document.getElementById('userInput').value.toLowerCase();
+    let botAnswer;
+
+    if (userQuestion.includes("table")) {
+      botAnswer = "Our schedule is available from Monday to Saturday. Please choose a convenient time!";
+    } else if (userQuestion.includes("price")) {
+      botAnswer = "Lesson cost: 500 rubles for one lesson or a subscription for 10 classes for 4,000 rubles.";
+    } else {
+      botAnswer = "Sorry, I can't answer this question yet. Please contact us by phone.";
+    }
+
+    const userMessage = `<p><strong>You:</strong> ${userQuestion}</p>`;
+    const botMessage = `<p><strong>Bot:</strong> ${botAnswer}</p>`;
+    chatBox.innerHTML += userMessage + botMessage;
+
+    document.getElementById('userInput').value = '';
+  }
+</script>
+
+</body>
+</html>
